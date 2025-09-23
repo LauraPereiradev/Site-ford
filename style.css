@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --cor-primaria: #1b357e;
+    --cor-secundaria: #1351d8;
+    --borda-padrao: 2px solid black
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: white;
+    padding: 10px 40px;
+}
+
+.secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo img {
+    flex: 0 0 auto;
+    height: 50px;
+
+}
+
+.links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza no meio */
+    display: flex;
+    align-items: center;
+    gap: 30px;   
+    text-decoration: none;
+    color: #1351d8;
+    font-weight: 500;
+}
+
+
