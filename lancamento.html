@@ -4,24 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>DesafioSprint</title>
 </head>
 <body>
-    <header>
-        <img src="img/logo-ford-256.png" alt="logo-ford-256"> 
-        <nav>
-         <ul>
-             <liu>
-                 <a href="Home.html">Home</a>
-             </liu>
-             <liu>
-                 <a href="Lançamento.html">Lançamento</a>
-             </liu>
-             <liu>
-                 <a href="Contato.html">Contato</a>
-             </liu>
-         </ul>
-        </nav>
+   
+    <header class="cabecalho"> 
+        <section class="secao">
+            <div class="logo">
+                <img src="img/logo-ford-256.png" alt="logo" >
+            </div>
+
+            <div class="links">
+                <a href="Home.html">Home</a>
+                <a href="lancamento.html">Lançamento</a>
+                <a href="Contato.html">Contato</a>
+            </div>
+        </section>
+        
     </header>
+
+    <main class="lancamento">
+        <iframe 
+          src="https://www.youtube.com/embed/vQsryuNmsL0"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+
+        <div class="imgLan">
+        <div class="card">      
+             <img src="img/XL Cabine.jpg" alt="Cabine"> 
+        <label> 
+            <input type="checkbox" name="carros"> XL Cabine Simples 2.2 Diesel <br>
+            <small>Ficha Técnica 2022</small>
+        </label>
+        </div>
+       
+        <div class="card">
+        <img src="img/xls 2.2 diesel.jpg" alt="diesel">
+        <label>
+            <input type="checkbox" name="carros"> XLS 2.2 Diesel 6M AT 2022 <br> <small>Ficha Técnica 2022</small>
+        </label>
+        </div>
+        
+        <div class="card">
+        <img src="img/storm.jpg" alt="storm"> 
+        <label>
+            <input type="checkbox" name="carros"> Storm 3.2 Diesel 6A AT 2022 <br> <small>Ficha Técnica 2022 </small>
+        </label>
+        </div> 
+        </div>
+
+        <button class="btn-comparar"> Comparar Carros</button>
+    </main>
+
+    <footer>
+
+        <div class="logoPag">
+            <p>Redes Sociais</p>
+            <a href="#">
+                <img src="img/facebook-50.png" alt="facebook-50">
+            </a>
+            <a href="#">
+                <img src="img/youtube-squared-50.png" alt="youtube-squared-50">
+            </a>
+            <a href="#">
+                <img src="img/instagram-logo-50.png" alt="instagram-logo-50">
+            </a>
+        </div>
+
+        <img src="img/ford-96.png" alt="ford-96">
+
+    </footer>
+
 </body>
 </html>
