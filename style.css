@@ -21,65 +21,131 @@ body {
 }
 
 header {
-    background-color: white;
-    padding: 10px 40px;
+   flex-direction: row;
+  justify-content: space-around;
+   width: auto;
+   height: 100%;
+   font-size: 50px;
+   border: 2px;
+   color: #1351d8;
 }
 
-.secao {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
+header img { 
+    width: 220px 200px;
 
-.logo img {
-    flex: 0 0 auto;
-    height: 50px;
-
-}
-
-.links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza no meio */
-    display: flex;
-    align-items: center;
-    gap: 30px;   
-    text-decoration: none;
-    color: #1351d8;
-    font-weight: 500;
 }
 
 main {
-    align-items: center;
+    flex: 1;
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    height: auto ;
-    width: 100%;
-    gap: 20px;
-   left: 0;
-   right: 0;
-   border: 0;
-}
-
-.legenda {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.corpo {
-    width: 80%;
-}
-
-main img {
-    width: 100%;
-    height: auto ;
-    display: block ;
-    margin: 0 auto;
+    justify-content: center;
     align-items: center;
+    padding: 40px;
+}
+
+.imgPrincipal img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+main p {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Contato {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;           
+    width: 100%;
+    margin: 0 auto;      
+    flex-wrap: wrap;    
+}
+
+
+.imgContato img {
+    max-width: 7000px; 
+    width: 100%;
+    height: auto;
+}
+
+.formContato {
+    max-width: 700px;   /* largura maior */
+    width: 100%;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    font-size: 1.2rem;  /* texto maior */
+}
+
+.formContato h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: var(--cor-primaria, #1b357e);
+}
+
+.formContato table {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+.formContato td {
+    font-size: 14px;
+    color: #333;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.formContato input,
+.formContato select,
+.formContato textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.formContato input:focus,
+.formContato select:focus,
+.formContato textarea:focus {
+    border-color: var(--cor-secundaria, #1351d8);
+    outline: none;
+    transform: scale(1.02);
+}
+
+.formContato button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: #1351d8;
+    color: white;
+    cursor: pointer;
+}
+.btn-enviar {
+    background: var(--cor-primaria, #1b357e);
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.formContato button:hover {
+    background-color: #0d3c9d;
 }
 
 footer{
@@ -147,21 +213,15 @@ footer{
     gap: 10px;
 }
 
-.card img {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    flex-direction: row;
-}
 
 .card label {
     color: #1b357e;
     font-weight: 500;
 }
-
+/* 
 .card input[type="checkbox"] {
     margin-right: 5px;
-}
+} */
 
 .btn-comparar {
     background-color: #1351d8;
