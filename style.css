@@ -1,3 +1,4 @@
+/* --- GERAL E RESET --- */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +20,12 @@ body {
   background-color: white;
 }
 
-/* Cabeçalho */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* LAYOUT PRINCIPAL (CABEÇALHO, CONTEÚDO, RODAPÉ) */
 header {
   background-color: white;
   padding: 15px 30px;
@@ -41,7 +47,6 @@ header {
   display: flex;
   gap: 40px;
   font-size: 16px;
-  justify-content: space-between;
 }
 
 .links a {
@@ -55,16 +60,12 @@ header {
   color: var(--cor-secundaria);
 }
 
-/* Conteúdo principal */
 main {
   flex: 1;
-  padding: 10px;
-  padding-bottom: 200px; 
-  width: 90%;
-  height: 100%;
+  padding: 40px 20px;
+  padding-bottom: 150px; 
 }
 
-/* Rodapé */
 footer {
   background-color: var(--cor-primaria);
   color: white;
@@ -76,6 +77,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
 }
 
 .logoPag {
@@ -92,15 +94,11 @@ footer {
 
 /* Página inicial (index) */
 .corpo {
-  max-width: 800px;
+  width: 90%;
+  left: 90%;
   margin: 0 auto;
   text-align: center;
-}
-
-.corpo img {
-  width: 100%;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-direction: row;
 }
 
 .legenda {
@@ -109,24 +107,20 @@ footer {
 }
 
 /* Página de lançamento */
-.lancamento {
+.lancamento, .video-descricao {
+  width: 95%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
 
-/* Vídeo + descrição */
-.video-descricao {
-  max-width: 900px;
-  width: 100%;
-  text-align: center;
-}
-
 .video-descricao iframe {
   width: 100%;
   aspect-ratio: 16/9;
-  border-radius: var(--radius);
   margin-bottom: 15px;
 }
 
@@ -146,95 +140,76 @@ footer {
 .galeria img {
   width: 250px;
   border-radius: var(--radius);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px black;
 }
 
 /* Tabela de modelos */
-
 .modelos table {
-  border: 2px 
-  padding: 20px;
-  border-radius: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-input {
-  padding: 12px;
-  border: 1px solid black;
-  border-radius: 10px;
+.modelos th, .modelos td {
+    padding: 12px;
+    border: 1px solid black;
+    text-align: left;
 }
 
-input {
+.modelos tr:nth-child(even) {
   background-color: white;
-  color:;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-tr:nth-child(even) {
-  background-color: white;
-}
-
-.btn-comparar {
-  background: var(--cor-primaria);
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: var(--radius);
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  
-}
-
-.btn-comparar:hover {
-  background: var(--cor-secundaria);
-  transform: scale(1.05);
 }
 
 /* Página de contato */
 .pagina-contato {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
-  height: 100vh;
-  flex-direction: row
 }
 
 .fotoCarro {
-  width: 300px;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 40%;
+  max-width: 400px;
+  border-radius: solid black;
+  box-shadow: 0 4px 8px black;
 }
 
 .contato {
   background: white;
   padding: 25px;
   border-radius: var(--radius);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  min-width: 350px;
-  flex: 1;
+  box-shadow: 0 4px 10px black;
+  width: 60%;
+  max-width: 500px;
 }
 
 .contato h2 {
   margin-bottom: 20px;
-  text-align: justify;
   color: var(--cor-primaria);
 }
 
-/* Estilo do formulário */
+/* formulário */
+
 input, select, textarea {
   width: 100%;
-  padding: 8px;
-  border: 1px solid white;
+  padding: 12px;
+  margin-bottom: 15px; /
+  border: 1px solid; 
   border-radius: 5px;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: black;
 }
 
 textarea {
-  resize: none;
+  resize: vertical;
+  min-height: 120px;
 }
 
-.btn-enviar {
+/* Botões */
+.btn-comparar, .btn-enviar {
   background: var(--cor-primaria);
   color: white;
   border: none;
@@ -244,67 +219,59 @@ textarea {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  width: auto; 
 }
 
-.btn-enviar:hover {
+.btn-comparar:hover, .btn-enviar:hover {
   background: var(--cor-secundaria);
-  transform: scale(1.05);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .links {
-    flex-direction: column;
-    gap: 10px;
-  }
 
-  .galeria img {
-    width: 100%;
-    max-width: 300px;
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+  .secao, .links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .logo {
+    position: static;
+    margin-bottom: 10px;
   }
 
   .pagina-contato {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
-  .fotoCarro {
+  .fotoCarro, .contato {
     width: 90%;
+    max-width: 500px;
   }
 
   footer {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+    padding: 15px;
+    position: static; 
+  }
+
+  main {
+      padding-bottom: 40px;
   }
 }
 
-/* Responsividade para iPhone XR (largura até 414px) */
-@media (max-width: 414px) {
-
-  /* Cabeçalho */
-  .secao {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .logo {
-    position: static; /* logo volta para o fluxo normal */
-    margin-bottom: 10px;
-  }
-
-  .links {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-
-  /* Conteúdo principal */
+/* Telas de celulares menores */
+@media (max-width: 480px) {
   main {
-    padding: 20px;
+    padding: 20px 10px;
+    padding-bottom: 20px;
   }
 
-  /* Galeria de imagens */
   .galeria {
     flex-direction: column;
     align-items: center;
@@ -315,43 +282,40 @@ textarea {
     max-width: 350px;
   }
 
-  /* Tabela de modelos */
-  .modelos table {
-    font-size: 14px;
+  .modelos table, .modelos thead, .modelos tbody, .modelos th, .modelos td, .modelos tr {
+      display: block; 
   }
 
-  th, td {
-    padding: 8px;
-    font-size: 13px;
+  .modelos thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
   }
 
-  .btn-comparar {
+  .modelos tr { 
+      border: 1px solid white; 
+      margin-bottom: 10px;
+  }
+    
+  .modelos td {
+      border: none;
+      border-bottom: 1px solid white;
+      position: relative;
+      padding-left: 50%;
+  }
+    
+  .modelos td:before {
+      position: absolute;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      content: attr(data-label); 
+      font-weight: bold;
+  }
+  
+  .btn-comparar, .btn-enviar {
     width: 100%;
     margin-top: 10px;
-  }
-
-  /* Página de contato */
-  .pagina-contato {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .fotoCarro {
-    width: 90%;
-    max-width: 320px;
-  }
-
-  .contato {
-    width: 100%;
-    min-width: unset;
-  }
-
-  /* Rodapé */
-  footer {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    padding: 20px;
   }
 }
