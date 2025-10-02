@@ -1,236 +1,288 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 :root {
-    --cor-primaria: #1b357e;
-    --cor-secundaria: #1351d8;
-    --borda-padrao: 2px solid black
+  --cor-primaria: #1b357e;
+  --cor-secundaria: #1351d8;
+  --cor-clara: #f5f5f5;
+  --cor-texto: #333;
+  --borda: 1px solid #ccc;
+  --radius: 8px;
 }
+
 body {
-    font-family: Arial, sans-serif;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    
-   
+  font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+  color: var(--cor-texto);
 }
 
+/* Cabeçalho */
 header {
-   flex-direction: row;
-  justify-content: space-around;
-   width: auto;
-   height: 100%;
-   font-size: 50px;
-   border: 2px;
-   color: #1351d8;
+  background-color: var(--cor-clara);
+  padding: 15px 30px;
+  border-bottom: 2px solid var(--cor-primaria);
 }
 
-header img { 
-    width: 220px 200px;
-
+.secao {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 50px;
 }
 
+.logo {
+  position: absolute;
+  left: 30px; 
+}
+
+.links {
+  display: flex;
+  gap: 40px;
+  font-size: 16px;
+  justify-content: space-between;
+}
+
+.links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--cor-secundaria);
+}
+
+/* Conteúdo principal */
 main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
+  flex: 1;
+  padding: 20px;
+  padding-bottom: 120px; /* evita que o conteúdo fique atrás do footer */
 }
 
-.imgPrincipal img {
-    width: 100%;
-    max-width: 100%;
-    display: block;
-    height: 80vh;
-    margin: 0 auto;
-}
-
-main p {
-    font-size: 50px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.Contato {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 50px;           
-    width: 100%;
-    margin: 0 auto;      
-    flex-wrap: wrap;    
-}
-
-
-.imgContato img {
-    max-width: 7000px; 
-    width: 100%;
-    height: auto;
-}
-
-.formContato {
-    max-width: 700px;   /* largura maior */
-    width: 100%;
-    background: #fff;
-    padding: 40px 50px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    font-size: 1.2rem;  /* texto maior */
-}
-
-.formContato h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 22px;
-    color: var(--cor-primaria, #1b357e);
-}
-
-.formContato table {
-    width: 100%;
-    border-spacing: 10px;
-}
-
-.formContato td {
-    font-size: 14px;
-    color: #333;
-    padding: 5px;
-    vertical-align: middle;
-}
-
-.formContato input,
-.formContato select,
-.formContato textarea {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.formContato input:focus,
-.formContato select:focus,
-.formContato textarea:focus {
-    border-color: var(--cor-secundaria, #1351d8);
-    outline: none;
-    transform: scale(1.02);
-}
-
-.formContato button {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    background-color: #1351d8;
-    color: white;
-    cursor: pointer;
-}
-.btn-enviar {
-    background: var(--cor-primaria, #1b357e);
-    color: #fff;
-    font-size: 16px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.formContato button:hover {
-    background-color: #0d3c9d;
-}
-
-footer{
-    background-color: var(--cor-primaria);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    gap: 15px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+/* Rodapé */
+footer {
+  background-color: var(--cor-primaria);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .logoPag {
-    display: flex;
-    font-weight: bold;
-    gap: 15px;
-    align-items: center;
-}
-
-.footer p {
-    margin: 0;
-    font-weight: bold ;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-weight: bold;
 }
 
 .logoPag img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
+/* Página inicial (index) */
+.corpo {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.corpo img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.legenda {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Página de lançamento */
 .lancamento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
-.lancamento iframe  {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border: none;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    height: 50vh;
+/* Vídeo + descrição */
+.video-descricao {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
 }
 
-.imgLan {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+.video-descricao iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
+.descricao {
+  font-size: 16px;
+  color: var(--cor-texto);
 }
 
-
-.card label {
-    color: #1b357e;
-    font-weight: 500;
+/* Galeria de imagens */
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-/* 
-.card input[type="checkbox"] {
-    margin-right: 5px;
-} */
+
+.galeria img {
+  width: 250px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Tabela de modelos */
+.modelos {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.modelos h2 {
+  margin-bottom: 15px;
+  color: var(--cor-primaria);
+}
+
+.modelos table {
+  border: 2px solid var(--cor-primaria);
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: var(--cor-primaria);
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
 
 .btn-comparar {
-    background-color: #1351d8;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 24px;
-    cursor: pointer;
+  background: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
- 
+
+.btn-comparar:hover {
+  background: var(--cor-secundaria);
+  transform: scale(1.05);
+}
+
+/* Página de contato */
+.pagina-contato {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.fotoCarro {
+  width: 300px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contato {
+  background: white;
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  min-width: 350px;
+  flex: 1;
+}
+
+.contato h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--cor-primaria);
+}
+
+/* Estilo do formulário */
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-enviar {
+  background: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-enviar:hover {
+  background: var(--cor-secundaria);
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .galeria img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .pagina-contato {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fotoCarro {
+    width: 90%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

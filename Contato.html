@@ -8,74 +8,74 @@
 </head>
 <body>
    
-    <header>
-        <table>
-            <tr>
-                <td><img src="img/logo-ford-256.png" alt="logo"><td> 
-                <td><a href="Home.html"> Home</a></td>
-                <td><a href="lancamento.html">Lançamento</a></td>
-                <td><a href="Contato.html">Contato</a>       
-            </td>
-            </tr>
-        </table>
+   <header class="cabecalho"> 
+        <section class="secao">
+            <div class="logo">
+                <img src="img/logo-ford-256.png" alt="Logo Ford">
+            </div>
+            <nav class="links">
+                <a href="index.html">Home</a>
+                <a href="lancamento.html">Lançamento</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </section>
     </header>
 
-    <main class="Contato">
-        <div class="imgContato">
-            <img src="img/xls 2.2 diesel.jpg" alt="carro vermelho">
-        </div>
+ <main class="pagina-contato">
 
-        <form class="formContato">
-            <h1>Sobre Você</h1>
-            <table>
-                <tr>
-                    <td><label for="nome">Nome*</label></td>
-                    <td><input type="text" id="nome" name="nome" required></td>
-                </tr>
-                <tr>
-                    <td><label for="email">E-mail*</label></td>
-                    <td><input type="email" id="email" name="email" required></td>
-                </tr>
-                <tr>
-                    <td><label for="telefone">Telefone*</label></td>
-                    <td><input type="tel" id="telefone" name="telefone" required></td>
-                </tr>
-                <tr>
-                    <td><label for="tipo">Tipo de Contato*</label></td>
-                    <td>
-                    <select name="tipo" id="Tipo" required>
-                        <option value="">Selecione...</option>
-                        <option value="elogio">Elogio</option>
-                        <option value="reclamacao">Reclamação</option>
-                        <option value="solicitacao">Solicitação</option>
-                    </select>
-                </td>
-                </tr>
-                <tr>
-                    <td><label for="mensagem">Mensagem*</label></td>
-                    <td><textarea name="mensagem" id="mensagem"  rows="4" required></textarea></td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align: center;">
-                        <button type="submit" class="btn-enviar">Enviar</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
+    <!-- Imagem do carro -->
+    <img src="img/xls 2.2 diesel.jpg" alt="Foto da Ford Ranger" class="fotoCarro">
 
-    </main>
+    <!-- Formulário -->
+    <section class="contato">
+      <h2>Entre em Contato</h2>
+      <form>
+        <table>
+          <tr>
+            <td><label for="nome">Nome:</label></td>
+            <td><input type="text" id="nome" name="nome" required></td>
+          </tr>
+          <tr>
+            <td><label for="email">E-mail:</label></td>
+            <td><input type="email" id="email" name="email" required></td>
+          </tr>
+          <tr>
+            <td><label for="telefone">Telefone:</label></td>
+            <td><input type="tel" id="telefone" name="telefone"></td>
+          </tr>
+          <tr>
+            <td><label for="tipo">Tipo de contato:</label></td>
+            <td>
+              <select id="tipo" name="tipo">
+                <option value="elogio">Elogio</option>
+                <option value="reclamacao">Reclamação</option>
+                <option value="solicitacao">Solicitação</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mensagem">Mensagem:</label></td>
+            <td><textarea id="mensagem" name="mensagem" rows="4"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align:center;">
+              <button type="submit" class="btn-enviar">Enviar</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </section>
+  </main>
 
-    <footer>
-        <div class="logoPag">
-            <p>Redes Sociais</p>
-            <a href="#"><img src="img/facebook-50.png" alt="facebook-50"></a>
-            <a href="#"><img src="img/youtube-squared-50.png" alt="youtube-squared-50"></a>
-            <a href="#"><img src="img/instagram-logo-50.png" alt="instagram-logo-50"></a>
-        </div>
-        
-        <img src="img/ford-96.png" alt="ford-96">
-
-    </footer>
+   <footer>
+    <div class="logoPag">
+      <p>Redes Sociais:</p>
+      <a href="#"><img src="img/facebook-50.png" alt="Facebook"></a>
+      <a href="#"><img src="img/youtube-squared-50.png" alt="YouTube"></a>
+      <a href="#"><img src="img/instagram-logo-50.png" alt="Instagram"></a>
+    </div>
+    <img src="img/ford-96.png" alt="Logo Ford menor">
+  </footer>
 
 </body>
 </html>
